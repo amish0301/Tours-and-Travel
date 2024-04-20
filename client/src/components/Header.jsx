@@ -41,11 +41,6 @@ const Nav = () => {
         </NavLink>
       </div>
 
-      {/* Mobile Menu - hamburger menu */}
-      <button className="md:hidden p-2" onClick={() => setIsMobile(!isMobile)}>
-        <Menu className="h-6 w-6 text-gray-600" aria-hidden="true" />
-      </button>
-
       {/* all the links */}
       <div className="hidden md:flex gap-5">
         {nav_links.map(link => (
@@ -64,46 +59,77 @@ const Nav = () => {
       </div>
 
       {/* for Mobile menu */}
-
-      <Transition
-        as={Dialog}
-        show={isMobile}
-        onClose={() => setIsMobile(false)}
-      >
-        <Transition.Child
-          as={MyDialogPanel}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+      <div>
+        <button
+          className="block lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 focus:outline-none"
+          onClick={() => setIsMobile(!isMobile)}
         >
-          <div className={`fixed inset-0 p-3 bg-white ${isMobile ? 'block' : 'hidden'}`}>
-            <div className="flex justify-between items-center">
-              <NavLink to="/home" className='flex items-center space-x-3'>
-                <img src={Logo} alt="logo" className='h-8 object-cover max-w-12 max-h-12' />
-                <span className='self-center text-xl font-semibold whitespace-nowrap'>Travellers</span>
-              </NavLink>
+          {
+            isMobile ? (
+              <XIcon className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )
+          }
+        </button>
 
-              <button className="md:hidden p-2" onClick={() => setIsMobile(!isMobile)}>
-                <XIcon className="h-6 w-6 text-gray-600" aria-hidden="true" />
-              </button>
+        {/* Mobile Menu */}
+        <Transition show={isMobile} className="lg:hidden" as={Dialog} onClose={() => setIsMobile(false)}>
+          <Transition.Child
+            as={MyDialogPanel}
+            enter="transition-opacity duration-200"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 z-50 bg-opacity-95 flex justify-end">
+              <div className="bg-slate-300 shadow-lg w-64">
+                <div className="py-3 px-4 text-lg font-bold">
+                  <button onClick={() => setIsMobile(false)}>
+                    {<XIcon className="h-6 w-6" aria-hidden="true" />}
+                  </button>
+                </div>
+                <div className="p-4 font-medium">
+                  <nav>
+                    <ul className="space-y-1">
+                      <li className="nav-li">
+                        <Link
+                          href="/home"
+                        >
+                          Home
+                        </Link>
+                      </li>
+                      <li className="nav-li">
+                        <a
+                          href="/about"
+                        >
+                          About
+                        </a>
+                      </li>
+                      <li className="nav-li">
+                        <a
+                          href="#"
+                        >
+                          Services
+                        </a>
+                      </li>
+                      <li className="nav-li">
+                        <a
+                          href="/contact"
+                        >
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
-            <div className="mt-6">
-              <ul>
-                {
-                  nav_links.map(link => (
-                    <NavLink key={link.path} to={link.path} className={`font-medium block rounded-lg hover:bg-red-500 hover:text-blue-200 m-3 p-3 ${pathname === link.path ? 'text-blue-500' : 'text-gray-600'}`}>{link.name}</NavLink>
-                  ))
-                }
-              </ul>
-            </div>
-          </div>
-        </Transition.Child>
-      </Transition>
-
-      
+          </Transition.Child>
+        </Transition>
+      </div>
     </nav >
   );
 };
