@@ -8,6 +8,7 @@ const SearchList = lazy(() => import("../pages/SearchList"));
 const TourDetails = lazy(() => import("../pages/TourDetails"));
 const Login = lazy(() => import("../pages/Login"));
 const SignUp = lazy(() => import("../pages/SignUp"));
+const About = lazy(() => import("../pages/About"));
 
 const Routers = () => {
   return (
@@ -36,6 +37,15 @@ const Routers = () => {
         element={
           <Suspense fallback={<div>Loading...</div>}>
             <Home />
+          </Suspense>
+        }
+      />
+
+      <Route
+        path="/about"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <About />
           </Suspense>
         }
       />

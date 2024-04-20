@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/travel-logo.jpg'
 import { Link, NavLink } from 'react-router-dom';
 
@@ -12,17 +12,18 @@ const nav_links = [
     name: 'Tours',
   },
   {
-    path: '#',
+    path: '/about',
     name: 'About',
   },
   {
-    path: '/contact',
+    path: '#',
     name: 'Contact',
   }
 ];
 
 
 const Header = () => {
+  const [pathname, setPathname] = useState('');
 
   return (
     <nav className='contianer py-2 mb-5'>
@@ -34,8 +35,8 @@ const Header = () => {
         <ul className='font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white light:bg-gray-800 light:border-gray-700'>
           {
             nav_links.map((val,index) => (
-              <li key={val.path} onClick={() => console.log(index)}>
-                <NavLink to={val.path} className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:to-blue-400 light:hover:text-white md:dark:hover:bg-transparent nav-link' >{val.name}</NavLink>
+              <li key={val.path} onClick={() => setPathname(window.location.pathname)}>
+                <NavLink to={val.path} className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:to-blue-400 light:hover:text-white md:dark:hover:bg-transparent ${pathname === val.path ? 'text-blue-400' : ''}`}>{val.name}</NavLink>
               </li>
             ))
           }
