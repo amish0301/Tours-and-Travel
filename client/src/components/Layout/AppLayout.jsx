@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../Header'
 import Footer from '../Footer'
 import Routers from '../../router/Routers'
+import Nav from '../Header'
 
 const AppLayout = () => {
   return (
     <>
-      <Header />
+      <Nav />
       <Routers />
       <Footer />
     </>
