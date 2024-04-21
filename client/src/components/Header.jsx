@@ -1,7 +1,8 @@
 import React, { forwardRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
-import { MenuIcon as Menu, XIcon as XIcon } from "@heroicons/react/outline";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 import Logo from "../assets/travel-logo.jpg";
 
 const nav_links = [
@@ -66,9 +67,9 @@ const Nav = () => {
         >
           {
             isMobile ? (
-              <XIcon className="h-6 w-6" aria-hidden="true" />
+              <IoClose className="h-6 w-6" aria-hidden="true"/>
             ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
+              <GiHamburgerMenu className="h-6 w-6" aria-hidden="true" />
             )
           }
         </button>
@@ -88,7 +89,7 @@ const Nav = () => {
               <div className="bg-slate-300 shadow-lg w-64">
                 <div className="py-3 px-4 text-lg font-bold">
                   <button onClick={() => setIsMobile(false)}>
-                    {<XIcon className="h-6 w-6" aria-hidden="true" />}
+                    {<IoClose className="h-6 w-6" aria-hidden="true" />}
                   </button>
                 </div>
                 <div className="p-4 font-medium">

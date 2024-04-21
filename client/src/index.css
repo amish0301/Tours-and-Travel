@@ -23,5 +23,13 @@
 }
 
 .hero_img_container {
-  @apply w-full h-full object-cover border-t-4 border-gray-300 rounded-lg;
+  @apply w-full h-full object-cover border-t-4 border-gray-300 rounded-lg hover:scale-105 transition duration-150 ease-in-out;
+}
+
+.form_input {
+  @apply w-full px-4 py-2 focus:outline-none focus:ring focus:ring-violet-300 mt-1 text-base font-semibold bg-gray-100 rounded-md;
+}
+
+.form_container {
+  @apply max-w-screen-lg mx-auto;
 }
