@@ -33,7 +33,7 @@ const Nav = () => {
   })
 
   return (
-    <nav className="p-3 flex bg-white justify-between items-center">
+    <nav className="px-8 py-5 ml-5 flex bg-white justify-between items-center sticky">
       <div className="flex items-center flex-shrink-0 mr-6">
         <NavLink to="/home" className='flex items-center space-x-3'>
           <img src={Logo} alt="logo" className='h-8 object-cover max-w-12 max-h-12' />

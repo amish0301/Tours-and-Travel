@@ -13,3 +13,15 @@
 .nav-li {
   @apply cursor-pointer px-4 py-2 text-gray-800 hover:bg-gray-300 hover:translate-x-2 transition duration-150 ease-in-out;
 }
+
+.hero_section {
+  @apply bg-white w-full md:min-w-full px-8 py-5 mb-5 mt-5 grid gap-0 md:gap-3 grid-cols-1 md:grid-cols-2;
+}
+
+.section_padding {
+  @apply px-8 py-5
+}
+
+.hero_img_container {
+  @apply w-full h-full object-cover border-t-4 border-gray-300 rounded-lg;
+}
