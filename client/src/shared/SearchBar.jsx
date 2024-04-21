@@ -11,7 +11,7 @@ export const SearchBar = () => {
   }
 
   return (
-    <div className='border border-gray-300 p-4 rounded-lg shadow-lg shadow-cyan-500/50 form_container w-full'>
+    <div className='border border-gray-300 p-4 rounded-lg shadow-lg shadow-cyan-500/50 form_container w-full mt-12 md:mt-0'>
       <form action='' method='post' onSubmit={formHandler} className='flex-wrap md:flex gap-3 w-full'>
         <div className='flex gap-3 mt-2 items-center'>
           <span className='text-2xl'>

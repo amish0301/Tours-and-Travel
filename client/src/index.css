@@ -11,7 +11,15 @@
 }
 
 .nav-li {
-  @apply cursor-pointer px-4 py-2 text-gray-800 hover:bg-gray-300 hover:translate-x-2 transition duration-150 ease-in-out;
+  @apply cursor-pointer px-4 py-2 text-gray-800 outline active:focus:ring-2 ring-violet-400 rounded-lg active:bg-gray-300 active:transform active:scale-100;
+}
+
+.sticky-nav {
+  @apply sticky top-0 z-50 bg-[#1D2951] backdrop-blur-lg shadow-lg transition-all duration-500 ease-in-out;
+}
+
+.nav {
+  @apply relative transition-all duration-500 ease-in-out text-base bg-gray-200;
 }
 
 .hero_section {
