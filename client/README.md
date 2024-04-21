@@ -1,3 +1,11 @@
+## Done By - Amish
+
+### On 21/04/2024
+- **Hero** section is done (Improvisation needed)
+- Traveling **Form** is done.
+- For more visit : [see](https://github.com/amish0301/Tours-and-Travel/pull/4) 
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
