@@ -5,6 +5,11 @@
 - Traveling **Form** is done.
 - For more visit : [see](https://github.com/amish0301/Tours-and-Travel/pull/4) 
 
+### On 22/04/2024
+- **Service Provide** section is done (Improvisation needed)
+- Featured Tour Section initialised
+- For more visit : [see](https://github.com/amish0301/Tours-and-Travel/pull/5) 
+
 
 # React + Vite
 
