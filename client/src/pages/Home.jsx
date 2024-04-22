@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../assets/travel-logo.jpg'
 import Video from '../assets/189692-886572510_medium.mp4'
-import { SearchBar, Subtitle } from '../index'
+import { SearchBar, Subtitle, ServiceList } from '../index'
 
 
 const Home = () => {
@@ -23,8 +23,20 @@ const Home = () => {
           <div className='w-1/3 p-3 h-[340px] mt-10'><img src={Logo} alt="hero_img" className='hero_img_container mt-6' /></div>
         </div>
       </div>
+
       <SearchBar />
-      <div className='h-[100vh]'></div>
+
+      <section className='service_section'>
+        <div className='h-full md:max-w-full md:py-20 m-auto flex-wrap md:flex items-center md:mt-[10rem] bg-red-100'>
+          <div className='flex-col w-1/2 md:w-1/3 p-4 space-y-2'>
+            <h5 className='text-[2.2rem] font-semibold text-black text-nowrap'>What we offer</h5>
+            <h2 className='text-blue-500 text-[1.5rem] text-nowrap'>We offer our best services</h2>
+          </div>
+          <div className='w-[50%] grid grid-cols-1 md:grid-cols-3 gap-4 m-auto'>
+            <ServiceList />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
