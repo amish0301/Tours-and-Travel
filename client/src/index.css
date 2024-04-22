@@ -11,11 +11,19 @@
 }
 
 .nav-li {
-  @apply cursor-pointer px-4 py-2 text-gray-800 hover:bg-gray-300 hover:translate-x-2 transition duration-150 ease-in-out;
+  @apply cursor-pointer px-4 py-2 text-gray-800 outline active:focus:ring-2 ring-violet-400 rounded-lg active:bg-gray-300 active:transform active:scale-100;
+}
+
+.sticky-nav {
+  @apply sticky top-0 z-50 bg-[#1D2951] backdrop-blur-lg shadow-lg transition-all duration-500 ease-in-out;
+}
+
+.nav {
+  @apply relative transition-all duration-500 ease-in-out text-base bg-gray-200;
 }
 
 .hero_section {
-  @apply bg-white w-full md:min-w-full px-8 py-5 mb-5 mt-5 grid gap-0 md:gap-3 grid-cols-1 md:grid-cols-2;
+  @apply bg-white w-full md:min-w-full px-8 py-5 grid gap-0 md:gap-3 grid-cols-1 md:grid-cols-2;
 }
 
 .section_padding {
@@ -27,9 +35,13 @@
 }
 
 .form_input {
-  @apply w-full px-4 py-2 focus:outline-none focus:ring focus:ring-violet-300 mt-1 text-base font-semibold bg-gray-100 rounded-md;
+  @apply min-w-full px-4 py-2 focus:outline-none focus:ring focus:ring-violet-300 mt-1 text-base font-semibold bg-gray-100 rounded-md border border-gray-300;
 }
 
 .form_container {
-  @apply max-w-screen-lg mx-auto;
+  @apply min-w-fit m-auto md:absolute md:left-10;
+}
+
+.custom_btn {
+  @apply bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 border border-blue-700 rounded
 }

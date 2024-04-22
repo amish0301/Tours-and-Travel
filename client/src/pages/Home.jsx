@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/travel-logo.jpg'
+import Video from '../assets/189692-886572510_medium.mp4'
 import { SearchBar, Subtitle } from '../index'
 
 
@@ -18,11 +19,12 @@ const Home = () => {
         </div>
         <div className='w-full p-5 flex justify-between items-center mx-auto'>
           <div className='w-1/3 p-3 h-[340px] '><img src={Logo} alt="hero-img" className='hero_img_container' /></div>
-          <div className='w-1/3 p-3 h-[340px] mt-[20px]'><img src={Logo} alt="hero-img" className='hero_img_container' /></div>
-          <div className='w-1/3 p-3 h-[340px] mt-[30px]'><img src={Logo} alt="hero-img" className='hero_img_container' /></div>
+          <div className='w-1/3 p-3 h-[340px] mt-5'><video src={Video} alt="nature-video" className='hero_img_container mt-3' typeof='video/mp4' loop onMouseEnter={(e) => e.target.play()} onMouseLeave={(e) => e.target.pause()} /></div>
+          <div className='w-1/3 p-3 h-[340px] mt-10'><img src={Logo} alt="hero_img" className='hero_img_container mt-6' /></div>
         </div>
-        <SearchBar />
       </div>
+      <SearchBar />
+      <div className='h-[100vh]'></div>
     </>
   )
 }
