@@ -23,7 +23,7 @@
 }
 
 .hero_section {
-  @apply bg-white w-full md:min-w-full px-8 py-5 mb-5 mt-5 grid gap-0 md:gap-3 grid-cols-1 md:grid-cols-2;
+  @apply bg-white w-full md:min-w-full px-8 py-5 grid gap-0 md:gap-3 grid-cols-1 md:grid-cols-2;
 }
 
 .section_padding {
@@ -35,9 +35,13 @@
 }
 
 .form_input {
-  @apply w-full px-4 py-2 focus:outline-none focus:ring focus:ring-violet-300 mt-1 text-base font-semibold bg-gray-100 rounded-md;
+  @apply min-w-full px-4 py-2 focus:outline-none focus:ring focus:ring-violet-300 mt-1 text-base font-semibold bg-gray-100 rounded-md border border-gray-300;
 }
 
 .form_container {
-  @apply max-w-screen-lg mx-auto;
+  @apply min-w-fit m-auto md:absolute md:left-10;
+}
+
+.custom_btn {
+  @apply bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 border border-blue-700 rounded
 }

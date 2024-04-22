@@ -22,8 +22,8 @@ const Home = () => {
           <div className='w-1/3 p-3 h-[340px] mt-5'><video src={Video} alt="nature-video" className='hero_img_container mt-3' typeof='video/mp4' loop onMouseEnter={(e) => e.target.play()} onMouseLeave={(e) => e.target.pause()} /></div>
           <div className='w-1/3 p-3 h-[340px] mt-10'><img src={Logo} alt="hero_img" className='hero_img_container mt-6' /></div>
         </div>
-        <SearchBar />
       </div>
+      <SearchBar />
       <div className='h-[100vh]'></div>
     </>
   )
