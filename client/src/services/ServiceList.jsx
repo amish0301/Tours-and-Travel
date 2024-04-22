@@ -1,10 +1,13 @@
 import React from 'react'
 import { ServiceCard } from './ServiceCard'
+import Weather from '../assets/weather_icon.png'
+import CustomiseImg from '../assets/customisation.png'
+import tour from '../assets/tour.png'
 
 const serviceData = [
-    { imgUrl: "http://dummyimage.com/209x167.png/ff4444/ffffff", title: "Calculate Weather", desc: "PO Box 42543" },
-    { imgUrl: "http://dummyimage.com/122x206.png/cc0000/ffffff", title: "Best Tour Guide", desc: "PO Box 15056" },
-    { imgUrl: "http://dummyimage.com/122x206.png/cc0000/ffffff", title: "Customization", desc: "PO Box 15056" },
+    { imgUrl: Weather, title: "Calculate Weather", desc: "PO Box 15056" },
+    { imgUrl: CustomiseImg, title: "Best Tour Guide", desc: "PO Box 15056" },
+    { imgUrl: tour, title: "Customization", desc: "PO Box 15056" },
 ]
 
 export const ServiceList = () => {

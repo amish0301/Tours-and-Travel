@@ -43,7 +43,7 @@ const Nav = () => {
   })
 
   return (
-    <nav className={`px-8 py-5 flex justify-between items-center ${navColor ? 'sticky-nav' : 'nav'}`}>
+    <nav className={`mx-auto px-8 py-5 flex flex-wrap justify-between items-center ${navColor ? 'sticky-nav' : 'nav'}`}>
       <div className="flex items-center flex-shrink-0 mr-6">
         <NavLink to="/home" className='flex items-center space-x-3'>
           <img src={Logo} alt="logo" className='h-8 object-cover max-w-12 max-h-12' />
@@ -52,7 +52,7 @@ const Nav = () => {
       </div>
 
       {/* all the links */}
-      <div className="hidden md:flex gap-5">
+      <div className="hidden md:flex space-x-5">
         {nav_links.map(link => (
           <NavLink key={link.path} to={link.path} onClick={() => setPathname(link.path)} className={`font-medium ${navColor ? 'hover:text-white' : 'hover:text-blue-500'} ${navColor ? 'text-white' : ''} ${pathname === link.path ? 'text-blue-500' : 'text-gray-600'}`}>{link.name}</NavLink>
         ))}
@@ -68,6 +68,8 @@ const Nav = () => {
         </button>
       </div>
 
+      {/* Search */}
+      
       {/* for Mobile menu */}
       <div>
         <button
