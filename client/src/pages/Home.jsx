@@ -27,7 +27,7 @@ const Home = () => {
       <SearchBar />
 
       <section className='service_section'>
-        <div className='h-full md:max-w-full md:py-20 m-auto flex-wrap md:flex items-center md:mt-[10rem] bg-red-100'>
+        <div className='h-full md:max-w-full md:py-20 m-auto flex-wrap md:flex items-center md:mt-[10rem] bg-gray-200'>
           <div className='flex-col w-1/2 md:w-1/3 p-4 space-y-2'>
             <h5 className='text-[2.2rem] font-semibold text-black text-nowrap'>What we offer</h5>
             <h2 className='text-blue-500 text-[1.5rem] text-nowrap'>We offer our best services</h2>
@@ -37,6 +37,18 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className='bg-green-200'> 
+        <div className='max-w-screen-2xl px-4 py-8 mx-auto lg:gap-6 xl:gap-0 lg:py-16 lg:grid-cols-12'>
+          <div className='mr-auto place-self-center lg:col-span-7'>
+            <div className=''>
+              <Subtitle subtitle={'Explore'} />
+              <h2 className='text-blue-500 text-xl md:text font-semibold mb-6 lg:mb-8'>Our Featured Tour</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   )
 }
