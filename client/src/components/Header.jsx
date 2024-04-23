@@ -24,7 +24,6 @@ const nav_links = [
   }
 ];
 
-
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [pathname, setPathname] = useState('');
