@@ -7,9 +7,12 @@
 
 ### On 22/04/2024
 - **Service Provide** section is done (Improvisation needed)
-- Featured Tour Section initialised
-- For more visit : [see](https://github.com/amish0301/Tours-and-Travel/pull/5) 
+- Featured Tour Section initialized
+- For more visit : [see](https://github.com/amish0301/Tours-and-Travel/pull/5)
 
+### On 24/04/2024
+- **Featured Tour** section added
+- For more visit : [see](https://github.com/amish0301/Tours-and-Travel/pull/8) 
 
 # React + Vite
 
