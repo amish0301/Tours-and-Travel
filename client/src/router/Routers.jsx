@@ -29,11 +29,9 @@ const Routers = () => {
           </Suspense>
         }
       />
-
-      <Route path="/" element={<Navigate to="/home" />} />
       
       <Route
-        path="/home"
+        path="/"
         element={
           <Suspense fallback={<div>Loading...</div>}>
             <Home />
@@ -74,7 +72,7 @@ const Routers = () => {
         }
       />
 
-      <Route path="*" element={<Navigate to="/home" />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
